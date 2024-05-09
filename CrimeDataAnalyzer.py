@@ -10,7 +10,7 @@ class CrimeDataAnalyzer:
         with open(self.file_name, 'r') as file:
             csv_reader = csv.reader(file)
             for row in csv_reader:
-                if len(row) >= 2 and row[1] == self.address:
+                if row[1] == self.address:
                     count += 1
         return count
     
